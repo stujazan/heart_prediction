@@ -13,3 +13,4 @@ sklearn==0.0
 threadpoolctl==2.1.0
 Werkzeug==0.15.5
 pandas>=0.19
+pip==22.1.1
