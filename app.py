@@ -8,6 +8,8 @@ import pandas as pd
 import numpy as np
 
 # Load the Random Forest CLassifier model
+pipe = pickle.load(open('pipe.pkl','rb'))
+df = pickle.load(open('df.pkl','rb'))
 filename = 'heart-disease-prediction-knn-model.pkl'
 model = pickle.load(open(filename, 'rb'))
 
