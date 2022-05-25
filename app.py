@@ -2,6 +2,10 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+import streamlit as st
+import pickle
+import pandas as pd
+import numpy as np
 
 # Load the Random Forest CLassifier model
 filename = 'heart-disease-prediction-knn-model.pkl'
