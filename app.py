@@ -13,7 +13,7 @@ def home():
 
 def predict():
 	
-	<>
+	if request.method == 'POST':
    
 
         age = int(request.form['age'])
