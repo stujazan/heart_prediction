@@ -1,6 +1,7 @@
 # Importing essential libraries
-from flask import Flask, render_template, request
+import streamlit as st
 import pickle
+import pandas as pd
 import numpy as np
 
 # Load the Random Forest CLassifier model
