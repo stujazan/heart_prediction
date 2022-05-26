@@ -4,12 +4,12 @@ import pickle
 import pandas as pd
 import numpy as np
 
-
+app.route('/')
 
 def home():
 	return render_template('main.html')
 
-
+app.route('/predict', methods=['GET','POST'])
 
 def predict():
     if request.method == 'POST':
@@ -36,5 +36,5 @@ def predict():
         
 
 if __name__ == '__main__':
-	
+	app.run(debug=True)
 
