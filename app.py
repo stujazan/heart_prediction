@@ -12,7 +12,7 @@ def home():
 app.route('/predict', methods=['GET','POST'])
 
 def predict():
-    if request.method == 'POST':
+   
 
         age = int(request.form['age'])
         sex = request.form.get('sex')
