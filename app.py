@@ -14,7 +14,7 @@ def home():
 def predict():
 	
 	if request.method=='GET':
-       age = int(request.form['age'])
+        age = int(request.form['age'])
         sex = request.form.get('sex')
         cp = request.form.get('cp')
         trestbps = int(request.form['trestbps'])
@@ -37,4 +37,3 @@ def predict():
 
 if __name__ == '__main__':
 	app.run(debug=True)
-
