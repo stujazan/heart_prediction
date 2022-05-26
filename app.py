@@ -17,7 +17,7 @@ def predict():
        
         
        
-        my_prediction = model.predict(data)
+        
         
         return render_template('result.html', prediction=my_prediction)
         
