@@ -17,7 +17,8 @@ def home():
 def predict():
 	
  	
-         if request.method == 'POST':
+           if request.method == 'POST':
+
         age = int(request.form['age'])
         sex = request.form.get('sex')
         cp = request.form.get('cp')
@@ -33,7 +34,10 @@ def predict():
         thal = request.form.get('thal')
         
         data = np.array([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
-         my_prediction = model.predict(data)
+        my_prediction = model.predict(data)
+        
+        return render_template('result.html', prediction=my_prediction)
+        
         
 
 if __name__ == '__main__':
