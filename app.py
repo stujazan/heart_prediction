@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 import numpy as np
 
-@app.route('/')
+@app.route('/predict')
 
 def home():
 	return render_template('main.html')
