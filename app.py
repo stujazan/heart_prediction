@@ -16,7 +16,7 @@ def predict():
 	if request.method=='POST':
        
         
-        data = np.array([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
+       
         my_prediction = model.predict(data)
         
         return render_template('result.html', prediction=my_prediction)
