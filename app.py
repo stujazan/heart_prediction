@@ -4,11 +4,6 @@ import pickle
 import pandas as pd
 import numpy as np
 
-# Load the Random Forest CLassifier model
-filename = 'heart-disease-prediction-knn-model.pkl'
-model = pickle.load(open(filename, 'rb'))
-
-app = Flask(__name__)
 
 @app.route('/')
 def home():
