@@ -13,10 +13,8 @@ def home():
 
 def predict():
 	
-	if request.method == 'POST':
-   
-
-      
+	if request.method=='POST':
+       age = int(request.form['age'])
         sex = request.form.get('sex')
         cp = request.form.get('cp')
         trestbps = int(request.form['trestbps'])
