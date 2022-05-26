@@ -1,23 +1,22 @@
 # Importing essential libraries
-import streamlit as st
+from flask import Flask, render_template, request
 import pickle
-import pandas as pd
 import numpy as np
 
+# Load the Random Forest CLassifier model
 filename = 'heart-disease-prediction-knn-model.pkl'
 model = pickle.load(open(filename, 'rb'))
 
-@app.route('/')
+app = Flask(__name__)
 
+@app.route('/')
 def home():
 	return render_template('main.html')
 
-@app.route('/predict', methods=['GET','POST'])
 
+@app.route('/predict', methods=['GET','POST'])
 def predict():
-	
- 	
-           if request.method == 'POST':
+    if request.method == 'POST':
 
         age = int(request.form['age'])
         sex = request.form.get('sex')
@@ -42,3 +41,4 @@ def predict():
 
 if __name__ == '__main__':
 	app.run(debug=True)
+
