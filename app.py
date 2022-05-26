@@ -12,6 +12,8 @@ def home():
 @app.route('/predict', methods=['GET','POST'])
 
 def predict():
+	
+	<>
    
 
         age = int(request.form['age'])
@@ -35,6 +37,6 @@ def predict():
         
         
 
-if __app__ == '__main__':
+if __name__ == '__main__':
 	app.run(debug=True)
 
