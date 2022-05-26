@@ -4,6 +4,9 @@ import pickle
 import pandas as pd
 import numpy as np
 
+filename = 'heart-disease-prediction-knn-model.pkl'
+model = pickle.load(open(filename, 'rb'))
+
 @app.route('/')
 
 def home():
@@ -14,7 +17,7 @@ def home():
 def predict():
 	
  	
-        
+         if request.method == 'POST':
         age = int(request.form['age'])
         sex = request.form.get('sex')
         cp = request.form.get('cp')
