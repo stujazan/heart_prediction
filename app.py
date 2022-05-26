@@ -4,11 +4,22 @@ import pickle
 import pandas as pd
 import numpy as np
 
-# Load the Random Forest CLassifier model
-filename = 'heart-disease-prediction-knn-model.pkl'
-model = pickle.load(open(filename, 'rb'))
 
-app = Flask(__name__)
+# import the model
+pipe = pickle.load(open('pipe.pkl','rb'))
+df = pickle.load(open('df.pkl','rb'))
+
+st.title("Heart Disease Predictor by Jazan student")
+# st.text("1 means you've a heart disease, 0 means you don't have a heart disease")
+#Age
+Age = st.number_input('Age of Person')
+#Sex
+Sex = st.selectbox('Sex',df['sex'].unique())
+#ChestPainType
+cp = st.selectbox('Chest Pain Type',df['cp'].unique())
+#RestingBP
+trestbps = st.number_input('Resting Blood Pressure')
+#Cholesterol
 
 @app.route('/')
 def home():
